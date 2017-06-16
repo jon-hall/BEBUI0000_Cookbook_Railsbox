@@ -3,8 +3,8 @@
 # Recipe:: default
 #
 
-include_recipe "cookbook_railsbox::locale"
 include_recipe 'apt'
+include_recipe "cookbook_railsbox::locale"
 package "libsqlite3-dev"
 include_recipe 'sqlite'
 if node["cookbook_databox"]["databases"]["mysql"]
